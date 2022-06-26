@@ -44,6 +44,9 @@
     // off for now
     "react/jsx-filename-extension": "off",
     "react/no-array-index-key": "off",
-    "import/extensions": "off"
+    "import/extensions": "off",
+    "react/destructuring-assignment": "off",
+    "react/no-unused-prop-types": "off",
+    "react/no-children-prop": "off"
   }
 }

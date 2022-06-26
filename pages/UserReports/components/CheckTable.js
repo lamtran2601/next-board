@@ -143,7 +143,7 @@ export default function CheckTable(props) {
                   return (
                     <Td
                       {...cell.getCellProps()}
-                      key={index}
+                      key={i}
                       fontSize={{ sm: '14px' }}
                       minW={{ sm: '150px', md: '200px', lg: 'auto' }}
                       borderColor="transparent"

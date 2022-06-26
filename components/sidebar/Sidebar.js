@@ -1,3 +1,4 @@
+/* eslint-disable react/forbid-prop-types */
 import React from 'react';
 
 // chakra imports
@@ -120,9 +121,7 @@ export const SidebarResponsive = (props) => {
 // PROPS
 
 Sidebar.propTypes = {
-  logoText: PropTypes.string,
   routes: PropTypes.arrayOf(PropTypes.object),
-  variant: PropTypes.string,
 };
 
 export default Sidebar;

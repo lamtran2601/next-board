@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import {
   Flex,
   Table,
@@ -76,11 +77,11 @@ export default function ColumnsTable(props) {
         <Thead>
           {headerGroups.map((headerGroup, index) => (
             <Tr {...headerGroup.getHeaderGroupProps()} key={index}>
-              {headerGroup.headers.map((column, index) => (
+              {headerGroup.headers.map((column, i) => (
                 <Th
                   {...column.getHeaderProps(column.getSortByToggleProps())}
                   pe="10px"
-                  key={index}
+                  key={i}
                   borderColor={borderColor}
                 >
                   <Flex
@@ -101,7 +102,8 @@ export default function ColumnsTable(props) {
             prepareRow(row);
             return (
               <Tr {...row.getRowProps()} key={index}>
-                {row.cells.map((cell, index) => {
+                {row.cells.map((cell, i) => {
+                  // eslint-disable-next-line @typescript-eslint/no-shadow
                   let data = '';
                   if (cell.column.Header === 'NAME') {
                     data = (
@@ -162,7 +164,7 @@ export default function ColumnsTable(props) {
                   return (
                     <Td
                       {...cell.getCellProps()}
-                      key={index}
+                      key={i}
                       fontSize={{ sm: '14px' }}
                       maxH="30px !important"
                       py="8px"

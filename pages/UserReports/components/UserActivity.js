@@ -4,12 +4,7 @@ import {
 } from '@chakra-ui/react';
 import Card from 'components/card/Card.js';
 // Custom components
-import BarChart from 'components/charts/BarChart';
 import React from 'react';
-import {
-  barChartDataUserActivity,
-  barChartOptionsUserActivity,
-} from 'variables/charts';
 
 export default function UserActivity(props) {
   const { ...rest } = props;
@@ -41,13 +36,6 @@ export default function UserActivity(props) {
           <option value="Monthly">Monthly</option>
         </Select>
       </Flex>
-
-      <Box h="240px" mt="auto">
-        <BarChart
-          chartData={barChartDataUserActivity}
-          chartOptions={barChartOptionsUserActivity}
-        />
-      </Box>
     </Card>
   );
 }
