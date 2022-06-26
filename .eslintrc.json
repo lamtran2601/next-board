@@ -28,11 +28,11 @@
     "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["state"] }],
     "no-use-before-define": "off",
     "no-shadow": "off",
-    "max-len": ["warn", { "code": 160 }],
+    // "max-len": ["warn", { "code": 160 }],
     "arrow-body-style": "off",
-    "import/prefer-default-export": "warn",
+    // "import/prefer-default-export": "warn",
     "@typescript-eslint/no-shadow": ["error"],
-    "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    // "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
     "@typescript-eslint/no-empty-function": "off",
     // "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
     "react/prop-types": "off",
@@ -47,6 +47,9 @@
     "import/extensions": "off",
     "react/destructuring-assignment": "off",
     "react/no-unused-prop-types": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "max-len": "off",
+    "import/prefer-default-export": "off",
     "react/no-children-prop": "off"
   }
 }
