@@ -1,3 +1,49 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/eslint-recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
+  "rules": {
+    "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["state"] }],
+    "no-use-before-define": "off",
+    "no-shadow": "off",
+    "max-len": ["warn", { "code": 160 }],
+    "arrow-body-style": "off",
+    "import/prefer-default-export": "warn",
+    "@typescript-eslint/no-shadow": ["error"],
+    "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "@typescript-eslint/no-empty-function": "off",
+    // "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
+    "react/prop-types": "off",
+    "react/require-default-props": "off",
+    "react/function-component-definition": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/no-unstable-nested-components": "off",
+    "react/jsx-props-no-spreading": "off",
+    // off for now
+    "react/jsx-filename-extension": "off",
+    "react/no-array-index-key": "off",
+    "import/extensions": "off"
+  }
 }

@@ -1,34 +1,67 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<br />
+<div align="center">
+  <h1 align="center">Noting</h1>
+  <p align="center">
+    Simple notion alternative with markdown format
+    <br />
+    <a href="http://react-noting.vercel.app">View Demo</a>
+    ·
+    <a href="https://github.com/lamtran2601/react-noting/issues">Report Bug - Request Feature</a>
+  </p>
+</div>
+
+[![Product Name Screen Shot][product-screenshot]](http://react-noting.vercel.app)
+
+## Features
+- [x] Take note like Notion
+- [x] Public, Private mode
+- [x] Realtime Syncing
+- [x] Desktop & Mobile Responsive
+- [ ] Upload image
+- [ ] Pin note
+- [ ] Note template
+- [ ] Document Collaboration
+- [ ] Export markdown file
+
+## Built With
+
+* [React.js](https://reactjs.org/)
+* [Redux Toolkit](https://github.com/reduxjs/redux-toolkit)
+* [Ant Design](https://github.com/ant-design/ant-design/)
+* [rich-markdown-editor](https://github.com/outline/rich-markdown-editor)
+* [Supabase](https://github.com/supabase/supabase)
 
 ## Getting Started
 
-First, run the development server:
+1. [Setup Supabase](./Supabase.md#setup)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+    Install Supabase CLI
+    ```
+    brew install supabase/tap/supabase
+    ```
+    Start local server
+    ```
+    supabase start
+    ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Clone the repo
+    ```sh
+    git clone https://github.com/lamtran2601/react-noting.git
+    ```
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+3. Enter your API in `.env`
+    ```env
+    ```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+4. Run app in local
+    ```sh
+    yarn
+    ```
+    ```sh
+    yarn dev
+    ```
+    Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[product-screenshot]: images/screenshot.png
