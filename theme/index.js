@@ -13,7 +13,8 @@ import { globalStyles } from './styles';
 import { config } from './config';
 
 export default extendTheme(
-  { config, breakpoints }, // Breakpoints
+  { config },
+  { breakpoints }, // Breakpoints
   globalStyles,
   badgeStyles, // badge styles
   buttonStyles, // button styles
