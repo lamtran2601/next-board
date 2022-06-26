@@ -5,7 +5,7 @@ import theme from 'theme';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider theme={theme} cssVarsRoot="body">
       <Component {...pageProps} />
     </ChakraProvider>
   );
