@@ -1,0 +1,37 @@
+[
+  {
+    "avatar": "https://www.pinkvilla.com/imageresize/margot_robbie_calls_harley_quinn_exhausting.jpg?width=752&format=webp&t=pvorg",
+    "info":"QUINN Vo\nHarley Quinn is a fictional character, a member of the DC Comics superhero team the Dark Knight's",
+    "skill": 80,
+    "hard-working": 99,
+    "reliability": 50
+  },
+  {
+    "avatar": "https://steamuserimages-a.akamaihd.net/ugc/1759191398828319563/4DCB5C8DE34847628DDD84F6E24BE852B300DE80/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+    "info":"OTIS Ho\nFullstack Developer",
+    "skill": 80,
+    "hard-working": 99,
+    "reliability": 50
+  },
+  {
+    "avatar": "https://pbs.twimg.com/profile_images/1418674160084127750/Bvje8V8T_400x400.jpg",
+    "info":"ZEN Tran\nFullstack Developer",
+    "skill": 80,
+    "hard-working": 99,
+    "reliability": 50
+  },
+  {
+    "avatar": "https://i.pinimg.com/originals/e6/c9/0b/e6c90b5b75bb7752f4d7612b591c1b02.png",
+    "info":"Skye Dang\nFullstack Developer",
+    "skill": 80,
+    "hard-working": 99,
+    "reliability": 50
+  },
+  {
+    "avatar": "https://i.pinimg.com/originals/46/ef/15/46ef15ac3bcccb09b4705ba1f32025f1.jpg",
+    "info":"Lucifer Manh\nFullstack Developer",
+    "skill": 80,
+    "hard-working": 99,
+    "reliability": 50
+  }
+]

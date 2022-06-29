@@ -10,12 +10,12 @@ import {
 const routes = [
   {
     name: 'Dashboard',
-    path: '/',
+    path: '/dashboard',
     icon: <Icon as={MdHome} width="20px" height="20px" color="inherit" />,
   },
   {
-    name: 'Profile',
-    path: '/profile',
+    name: 'Staff',
+    path: '/staff',
     icon: <Icon as={MdPerson} width="20px" height="20px" color="inherit" />,
   },
 ];
