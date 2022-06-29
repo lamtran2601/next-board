@@ -2,7 +2,6 @@ import {
   Flex,
   Table,
   Progress,
-  Icon,
   Tbody,
   Td,
   Text,
@@ -21,7 +20,7 @@ import {
 } from 'react-table';
 import Card from 'components/card/Card';
 
-export default function StaffTable(props: { columnsData: any, tableData: any }) {
+export default function StaffTable(props) {
   const { columnsData, tableData } = props;
 
   const columns = useMemo(() => columnsData, [columnsData]);
@@ -69,12 +68,12 @@ export default function StaffTable(props: { columnsData: any, tableData: any }) 
       <Table {...getTableProps()} variant="simple" color="gray.500" mb="24px">
         <Thead>
           {headerGroups.map((headerGroup, index) => (
-            <Tr {...headerGroup.getHeaderGroupProps()} key={index}>
+            <Tr {...headerGroup.getHeaderGroupProps()} key={`Thead-tr-${index}`}>
               {headerGroup.headers.map((column, i) => (
                 <Th
                   {...column.getHeaderProps(column.getSortByToggleProps())}
                   pe="10px"
-                  key={i}
+                  key={`th-${index}-${i}`}
                   borderColor={borderColor}
                 >
                   <Flex
@@ -94,19 +93,19 @@ export default function StaffTable(props: { columnsData: any, tableData: any }) 
           {page.map((row, index) => {
             prepareRow(row);
             return (
-              <Tr {...row.getRowProps()} key={index}>
-                {row.cells.map((cell, index) => {
+              <Tr {...row.getRowProps()} key={`Tbody-tr-${index}`}>
+                {row.cells.map((cell, i) => {
                   const getData = () => {
                     switch (cell.column.Header) {
                       case 'AVATAR':
                         return <Image src={cell.value} alt="avatar" width="80px" height="80px" objectFit="cover" borderRadius={10} />;
                       case 'INFO':
-                        return cell.value.split('\n').map((value, i) => (
+                        return cell.value.split('\n').map((value, j) => (
                           <Text
                             color={textColor}
-                            fontSize={i === 0 ? 'large' : 'small'}
+                            fontSize={j === 0 ? 'large' : 'small'}
                             fontWeight="bold"
-                            opacity={i === 0 ? 1 : 0.5}
+                            opacity={j === 0 ? 1 : 0.5}
                             textOverflow="ellipsis"
                           >
                             {value}
@@ -133,7 +132,7 @@ export default function StaffTable(props: { columnsData: any, tableData: any }) 
                   return (
                     <Td
                       {...cell.getCellProps()}
-                      key={index}
+                      key={`Td-${index}-${i}`}
                       fontSize={{ sm: '24px' }}
                       minW={{ sm: '150px', md: '200px', lg: 'auto' }}
                       height={120}

@@ -2,12 +2,11 @@ import React from 'react';
 
 import { Icon } from '@chakra-ui/react';
 import {
-  MdBarChart,
   MdPerson,
   MdHome,
 } from 'react-icons/md';
 
-const routes = [
+export const routes = [
   {
     name: 'Dashboard',
     path: '/dashboard',
@@ -19,5 +18,3 @@ const routes = [
     icon: <Icon as={MdPerson} width="20px" height="20px" color="inherit" />,
   },
 ];
-
-export default routes;

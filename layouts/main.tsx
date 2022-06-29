@@ -1,7 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import Sidebar from 'components/sidebar/Sidebar';
 import { SidebarContext } from 'contexts/SidebarContext';
-import routes from 'pages/routes';
+import { routes } from 'lib/routes';
 import { ReactNode, useState } from 'react';
 
 const MainLayout = (props: { children: ReactNode }) => {

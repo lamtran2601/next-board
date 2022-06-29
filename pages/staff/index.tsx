@@ -1,13 +1,12 @@
 import { Box } from '@chakra-ui/react';
+import StaffTable from 'components/StaffTable';
 import React from 'react';
-import StaffTable from './components/StaffTable';
 import {
   columnsDataComplex,
 } from './variables/columnsData';
 import tableDataComplex from './variables/tableDataComplex.json';
 
-export default function Settings() {
-  // Chakra Color Mode
+export default function Staff() {
   return (
     <Box>
       <StaffTable
