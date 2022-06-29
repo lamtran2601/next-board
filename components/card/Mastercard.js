@@ -8,7 +8,6 @@ import {
 import Card from 'components/card/Card.js';
 
 // Assets
-import bgMastercard from 'assets/img/dashboards/Debit.png';
 import { RiMastercardFill } from 'react-icons/ri';
 
 export default function Banner(props) {
@@ -19,7 +18,6 @@ export default function Banner(props) {
   // Chakra Color Mode
   return (
     <Card
-      backgroundImage={bgMastercard}
       backgroundRepeat="no-repeat"
       bgSize="cover"
       alignSelf="center"

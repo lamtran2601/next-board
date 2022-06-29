@@ -6,7 +6,6 @@ import {
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
-import logoWhite from 'assets/img/layout/logoWhite.png';
 import React from 'react';
 
 export default function SidebarDocs() {
@@ -38,7 +37,7 @@ export default function SidebarDocs() {
         top="-47px"
         transform="translate(-50%, 0%)"
       >
-        <Image src={logoWhite} w="40px" h="40px" />
+        Logo
       </Flex>
       <Flex
         direction="column"

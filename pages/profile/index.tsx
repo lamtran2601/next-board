@@ -30,7 +30,7 @@ import {
 import tableDataCheck from './variables/tableDataCheck.json';
 import tableDataComplex from './variables/tableDataComplex.json';
 
-export default function UserReports() {
+export default function Profile() {
   // Chakra Color Mode
   const brandColor = useColorModeValue('brand.500', 'white');
   const boxBg = useColorModeValue('secondaryGray.300', 'whiteAlpha.100');

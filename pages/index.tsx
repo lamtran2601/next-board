@@ -1,10 +1,3 @@
-import type { NextPage } from 'next';
-import UserReports from './UserReports';
+import Dashboard from './dashboard';
 
-const Home: NextPage = () => {
-  return (
-    <UserReports />
-  );
-};
-
-export default Home;
+export default Dashboard;
