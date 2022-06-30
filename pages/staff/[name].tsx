@@ -23,10 +23,7 @@ export default function StaffDetails() {
 
   const profile = detailsData.find((item: any) => item.name === name);
   const { programLanguages = {} } = profile || {};
-  console.log(programLanguages);
-
-  const languageData = Object.keys(programLanguages).map((key) => ({ language: key, skill: programLanguages?.[key] }));
-  console.log(languageData);
+  const languageData = Object.keys(programLanguages).map((key) => ({ language: key, skill: (programLanguages as any)[key] }));
 
   const brandColor = useColorModeValue('brand.500', 'white');
   const boxBg = useColorModeValue('secondaryGray.300', 'whiteAlpha.100');
