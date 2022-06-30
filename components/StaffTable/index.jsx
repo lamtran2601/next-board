@@ -21,7 +21,9 @@ import {
 import Card from 'components/card/Card';
 
 export default function StaffTable(props) {
-  const { columnsData, tableData } = props;
+  const {
+    columnsData, tableData, onCellClick,
+  } = props;
 
   const columns = useMemo(() => columnsData, [columnsData]);
   const data = useMemo(() => tableData, [tableData]);
@@ -137,6 +139,7 @@ export default function StaffTable(props) {
                       minW={{ sm: '150px', md: '200px', lg: 'auto' }}
                       height={120}
                       borderColor="transparent"
+                      onClick={() => onCellClick(cell.value, row.original)}
                     >
                       {getData()}
                     </Td>

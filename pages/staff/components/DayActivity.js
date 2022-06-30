@@ -16,11 +16,11 @@ import { MdBarChart, MdOutlineCalendarToday } from 'react-icons/md';
 // Assets
 import { RiArrowUpSFill } from 'react-icons/ri';
 import {
-  lineChartDataTotalSpent,
+  lineChartDataWeekActivity,
   lineChartOptionsTotalSpent,
 } from 'variables/charts';
 
-export default function TotalSpent(props) {
+export default function DayActivity(props) {
   const { ...rest } = props;
 
   // Chakra Color Mode
@@ -61,7 +61,7 @@ export default function TotalSpent(props) {
               color={textColorSecondary}
               me="4px"
             />
-            This month
+            This week
           </Button>
           <Button
             ms="auto"
@@ -90,7 +90,7 @@ export default function TotalSpent(props) {
             fontWeight="700"
             lineHeight="100%"
           >
-            $37.5K
+            {lineChartDataWeekActivity[0].data.reduce((acc, curr) => acc + curr, 0)}
           </Text>
           <Flex align="center" mb="20px">
             <Text
@@ -100,7 +100,7 @@ export default function TotalSpent(props) {
               mt="4px"
               me="12px"
             >
-              Total Spent
+              Commit
             </Text>
             <Flex align="center">
               <Icon as={RiArrowUpSFill} color="green.500" me="2px" mt="2px" />
@@ -119,7 +119,7 @@ export default function TotalSpent(props) {
         </Flex>
         <Box minH="260px" minW="75%" mt="auto">
           <LineChart
-            chartData={lineChartDataTotalSpent}
+            chartData={lineChartDataWeekActivity}
             chartOptions={lineChartOptionsTotalSpent}
           />
         </Box>

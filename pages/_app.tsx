@@ -1,4 +1,5 @@
-import 'styles/index.css';
+import 'react-calendar/dist/Calendar.css';
+import 'styles/MiniCalendar.css';
 import type { AppProps } from 'next/app';
 import { ChakraProvider } from '@chakra-ui/react';
 import theme from 'theme';
