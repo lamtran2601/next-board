@@ -13,10 +13,21 @@ export const columnsDataComplex = [
   },
   {
     Header: 'HARD WORKING',
-    accessor: 'hard-working',
+    accessor: 'hardWorking',
   },
   {
     Header: 'RELIABILITY',
     accessor: 'reliability',
+  },
+];
+
+export const columnsLanguage = [
+  {
+    Header: 'Language',
+    accessor: 'language',
+  },
+  {
+    Header: 'Level',
+    accessor: 'skill',
   },
 ];

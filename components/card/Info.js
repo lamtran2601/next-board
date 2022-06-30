@@ -6,6 +6,7 @@ import {
   Icon,
   Image,
   Link,
+  SimpleGrid,
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
@@ -15,62 +16,51 @@ import Card from 'components/card/Card.js';
 import React from 'react';
 
 export default function Info(props) {
-  const { image, name, author } = props;
+  const {
+    avatar, name, info, skill, hardWorking, workingTime, description = '',
+  } = props;
   const textColor = useColorModeValue('navy.700', 'white');
   return (
     <Card p="20px">
-      <Flex direction={{ base: 'column' }} justify="center">
+      <SimpleGrid columns={2} gap={4}>
         <Box mb={{ base: '20px', '2xl': '20px' }} position="relative">
           <Image
-            src={image}
+            src={avatar}
             w={{ base: '100%', '3xl': '100%' }}
             h={{ base: '100%', '3xl': '100%' }}
             borderRadius="20px"
           />
         </Box>
-        <Flex flexDirection="column" justify="space-between" h="100%">
-          <Flex
-            justify="space-between"
-            direction={{
-              base: 'row',
-              md: 'column',
-              lg: 'row',
-              xl: 'column',
-              '2xl': 'row',
-            }}
-            mb="auto"
+        <Box columnGap={5}>
+          <Text
+            color={textColor}
+            fontWeight="bold"
           >
-            <Flex direction="column">
-              <Text
-                color={textColor}
-                fontSize={{
-                  base: 'xl',
-                  md: 'lg',
-                  lg: 'lg',
-                  xl: 'lg',
-                  '2xl': 'md',
-                  '3xl': 'lg',
-                }}
-                mb="5px"
-                fontWeight="bold"
-                me="14px"
-              >
-                {name}
-              </Text>
-              <Text
-                color="secondaryGray.600"
-                fontSize={{
-                  base: 'sm',
-                }}
-                fontWeight="400"
-                me="14px"
-              >
-                {author}
-              </Text>
-            </Flex>
-          </Flex>
-        </Flex>
-      </Flex>
+            {name}
+          </Text>
+          {' '}
+          <Text
+            color="secondaryGray.600"
+            fontWeight="400"
+          >
+            {info}
+          </Text>
+          <Text
+            color="secondaryGray.600"
+            fontWeight="400"
+          >
+            {workingTime}
+          </Text>
+          {description.split('\n').map((e) => (
+            <Text
+              color="secondaryGray.600"
+              fontWeight="400"
+            >
+              {e}
+            </Text>
+          ))}
+        </Box>
+      </SimpleGrid>
     </Card>
   );
 }

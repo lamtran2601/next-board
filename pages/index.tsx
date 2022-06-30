@@ -1,3 +1,3 @@
-import Dashboard from 'pages/dashboard';
+import Staff from 'pages/staff';
 
-export default Dashboard;
+export default Staff;
